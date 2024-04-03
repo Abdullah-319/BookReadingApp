@@ -46,7 +46,7 @@ const BookList = () => {
           <View style={styles.item}>
             <Image
               style={styles.bookImage}
-              source={{ uri: item.coverPhotoUri }}
+              source={require("./assets/book.jpg")}
             />
             <Text style={[styles.text, { textAlign: rtl ? "right" : "left" }]}>
               Title: {item.title}
@@ -69,7 +69,7 @@ const BookList = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    paddingTop: 70,
     flex: 1,
     padding: 16,
     backgroundColor: "#F5F5DC",
@@ -106,9 +106,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF8DC",
   },
   bookImage: {
-    width: 100,
-    height: 150,
+    width: 361,
+    height: 200,
     resizeMode: "cover",
+    marginBottom: 15,
   },
   loading: {
     flex: 1,
